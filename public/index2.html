@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="index.css">
+ 
+</head>
+<body>
+    
+
+<div class="second-page">
+    <ol id="notes_list" class="notes_list">
+
+    </ol>
+</div>
+
+<a href="index.html"><h3>Back</h3></a>
+
+
+<script>
+var noteList = document.getElementById('notes_list')
+var retrieved = JSON.parse(localStorage.getItem("todo"));
+
+for (let i = 0; i <retrieved.length; i++) {
+   let noted = document.createElement('li')
+   noted.innerText=retrieved[i]
+   noteList.appendChild(noted)
+    
+}
+
+</script>
+
+
+<script src="index.js">
+
+    
+</body>
+
+</html>
